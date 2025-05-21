@@ -26,3 +26,10 @@ sudo apt install ./code_1.100.2-1747260578_amd64.deb
 ```
 sudo apt install python3.8-venv
 ```
+a następnie po utworzeniu środowiska instalujemy potrzebne zależności takie jak np.: numpy i networkx.
+
+### Dodanie potrzebnych funkcjonalności
+1. Instalacja FRRouting do rutingu
+```
+sudo apt-get install frr frr-pythontools
+```
