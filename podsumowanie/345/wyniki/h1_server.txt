@@ -1,0 +1,46 @@
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 192.168.1.2 port 5001 connected with 192.168.2.2 port 44352
+[  2] local 192.168.1.2 port 5001 connected with 192.168.3.2 port 35544
+[  3] local 192.168.1.2 port 5001 connected with 192.168.5.2 port 49766
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-1.0000 sec  4.43 MBytes  37.1 Mbits/sec
+[  2] 0.0000-1.0000 sec  8.94 MBytes  75.0 Mbits/sec
+[  3] 0.0000-1.0000 sec  3.02 MBytes  25.3 Mbits/sec
+[  1] 1.0000-2.0000 sec  5.47 MBytes  45.8 Mbits/sec
+[  2] 1.0000-2.0000 sec  9.34 MBytes  78.3 Mbits/sec
+[  3] 1.0000-2.0000 sec  2.40 MBytes  20.1 Mbits/sec
+[  1] 2.0000-3.0000 sec  5.87 MBytes  49.3 Mbits/sec
+[  2] 2.0000-3.0000 sec  9.29 MBytes  77.9 Mbits/sec
+[  3] 2.0000-3.0000 sec  1.98 MBytes  16.6 Mbits/sec
+[  1] 3.0000-4.0000 sec  6.16 MBytes  51.7 Mbits/sec
+[  2] 3.0000-4.0000 sec  9.43 MBytes  79.1 Mbits/sec
+[  3] 3.0000-4.0000 sec  1.71 MBytes  14.3 Mbits/sec
+[  1] 4.0000-5.0000 sec  6.22 MBytes  52.2 Mbits/sec
+[  2] 4.0000-5.0000 sec  9.39 MBytes  78.7 Mbits/sec
+[  3] 4.0000-5.0000 sec  1.53 MBytes  12.9 Mbits/sec
+[  3] 5.0000-6.0000 sec  1.39 MBytes  11.7 Mbits/sec
+[  1] 5.0000-6.0000 sec  6.42 MBytes  53.9 Mbits/sec
+[  2] 5.0000-6.0000 sec  9.42 MBytes  79.0 Mbits/sec
+[  1] 6.0000-7.0000 sec  6.64 MBytes  55.7 Mbits/sec
+[  2] 6.0000-7.0000 sec  8.98 MBytes  75.3 Mbits/sec
+[  3] 6.0000-7.0000 sec  1.38 MBytes  11.6 Mbits/sec
+[  1] 7.0000-8.0000 sec  7.12 MBytes  59.7 Mbits/sec
+[  2] 7.0000-8.0000 sec  8.97 MBytes  75.2 Mbits/sec
+[  3] 7.0000-8.0000 sec  1.05 MBytes  8.80 Mbits/sec
+[  1] 8.0000-9.0000 sec  7.37 MBytes  61.9 Mbits/sec
+[  2] 8.0000-9.0000 sec  8.93 MBytes  74.9 Mbits/sec
+[  3] 8.0000-9.0000 sec  1.05 MBytes  8.82 Mbits/sec
+[  1] 9.0000-10.0000 sec  7.48 MBytes  62.7 Mbits/sec
+[  2] 9.0000-10.0000 sec  8.72 MBytes  73.1 Mbits/sec
+[  3] 9.0000-10.0000 sec  1.02 MBytes  8.54 Mbits/sec
+[  2] 10.0000-10.2635 sec  2.48 MBytes  78.9 Mbits/sec
+[  2] 0.0000-10.2635 sec  93.9 MBytes  76.7 Mbits/sec
+[  1] 10.0000-11.0000 sec  5.69 MBytes  47.7 Mbits/sec
+[  3] 10.0000-11.0000 sec   512 KBytes  4.19 Mbits/sec
+[  1] 11.0000-11.3031 sec  2.06 MBytes  57.1 Mbits/sec
+[  1] 0.0000-11.3031 sec  70.9 MBytes  52.6 Mbits/sec
+[  3] 11.0000-11.6927 sec  3.34 MBytes  40.5 Mbits/sec
+[  3] 0.0000-11.6927 sec  20.4 MBytes  14.6 Mbits/sec

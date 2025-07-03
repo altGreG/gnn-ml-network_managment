@@ -1,0 +1,104 @@
+Wylosowana liczba ruterow: 5
+Utworzono 5 katalogów z plikami konfiguracyjnymi.
+Podmieniono 4. linijkę w pliku 'config_frr.conf' na:
+for NODE in r1 r2 r3 r4 r5
+Połączenia między ruterami:
+  r1 <--> r2
+  r1 <--> r4
+  r1 <--> r5
+  r2 <--> r3
+  r3 <--> r4
+  r4 <--> r5
+
+Wylosowana macierz sąsiedztwa:
+[[0 1 0 1 1]
+ [1 0 1 0 0]
+ [0 1 0 1 0]
+ [1 0 1 0 1]
+ [1 0 0 1 0]]
+Dopisano konfigurację interfejsów do r1/frr.conf
+Dopisano konfigurację interfejsów do r2/frr.conf
+Dopisano konfigurację interfejsów do r3/frr.conf
+Dopisano konfigurację interfejsów do r4/frr.conf
+Dopisano konfigurację interfejsów do r5/frr.conf
+Dopisano konfigurację OSPF do r1/frr.conf
+Dopisano konfigurację OSPF do r2/frr.conf
+Dopisano konfigurację OSPF do r3/frr.conf
+Dopisano konfigurację OSPF do r4/frr.conf
+Dopisano konfigurację OSPF do r5/frr.conf
+Dokonano propagacji konfiguracji ruterow do mininet!
+['r1', 'r2', 'r3', 'r4', 'r5']
+Ostrzeżenie: sieć 192.168.1.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r1', 'eth0', '192.168.1.1/24')]
+Ostrzeżenie: sieć 192.168.2.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r2', 'eth0', '192.168.2.1/24')]
+Ostrzeżenie: sieć 192.168.3.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r3', 'eth0', '192.168.3.1/24')]
+Ostrzeżenie: sieć 192.168.4.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r4', 'eth0', '192.168.4.1/24')]
+Ostrzeżenie: sieć 192.168.5.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r5', 'eth0', '192.168.5.1/24')]
+Rzeczywiste dodawanie linków pomiędzy ruterami:
+
+        self.addLink(r1,
+                     r2,
+                     intfName1='eth1',
+                     params1={'ip': '10.0.0.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.0.2/24'})
+
+        self.addLink(r1,
+                     r4,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.1.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.1.2/24'})
+
+        self.addLink(r1,
+                     r5,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.2.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.2.2/24'})
+
+        self.addLink(r2,
+                     r3,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.3.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.3.2/24'})
+
+        self.addLink(r3,
+                     r4,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.4.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.4.2/24'})
+
+        self.addLink(r4,
+                     r5,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.5.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.5.2/24'})
+
+Czekam na zbieżność routingu...
+Liczba folderów w podsumowanie: 451
+Wystartowano iperf na klientach!
+Host h1 sends with 64Mbps bandwidth to Host h2
+Host h1 sends with 100Mbps bandwidth to Host h3
+Host h1 sends with 99Mbps bandwidth to Host h4
+Host h1 sends with 97Mbps bandwidth to Host h5
+Host h2 sends with 62Mbps bandwidth to Host h1
+Host h2 sends with 53Mbps bandwidth to Host h3
+Host h2 sends with 75Mbps bandwidth to Host h4
+Host h3 sends with 91Mbps bandwidth to Host h1
+Host h3 sends with 80Mbps bandwidth to Host h2
+Host h3 sends with 86Mbps bandwidth to Host h4
+Host h3 sends with 55Mbps bandwidth to Host h5
+Host h4 sends with 53Mbps bandwidth to Host h1
+Host h4 sends with 57Mbps bandwidth to Host h3
+Host h5 sends with 79Mbps bandwidth to Host h3
+Host h5 sends with 59Mbps bandwidth to Host h4
+Rozpoczęto iperf na klientach!
+Oczekiwanie na zakończenie iperfa
+Usuwam katalog: /home/ubuntu/Project/r1
+Usuwam katalog: /home/ubuntu/Project/r2
+Usuwam katalog: /home/ubuntu/Project/r3
+Usuwam katalog: /home/ubuntu/Project/r4
+Usuwam katalog: /home/ubuntu/Project/r5

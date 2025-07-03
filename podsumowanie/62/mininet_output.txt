@@ -1,0 +1,140 @@
+Wylosowana liczba ruterow: 6
+Utworzono 6 katalogów z plikami konfiguracyjnymi.
+Podmieniono 4. linijkę w pliku 'config_frr.conf' na:
+for NODE in r1 r2 r3 r4 r5 r6
+Połączenia między ruterami:
+  r1 <--> r2
+  r1 <--> r5
+  r1 <--> r6
+  r2 <--> r3
+  r2 <--> r5
+  r2 <--> r6
+  r4 <--> r5
+
+Wylosowana macierz sąsiedztwa:
+[[0 1 0 0 1 1]
+ [1 0 1 0 1 1]
+ [0 1 0 0 0 0]
+ [0 0 0 0 1 0]
+ [1 1 0 1 0 0]
+ [1 1 0 0 0 0]]
+Dopisano konfigurację interfejsów do r1/frr.conf
+Dopisano konfigurację interfejsów do r2/frr.conf
+Dopisano konfigurację interfejsów do r3/frr.conf
+Dopisano konfigurację interfejsów do r4/frr.conf
+Dopisano konfigurację interfejsów do r5/frr.conf
+Dopisano konfigurację interfejsów do r6/frr.conf
+Dopisano konfigurację OSPF do r1/frr.conf
+Dopisano konfigurację OSPF do r2/frr.conf
+Dopisano konfigurację OSPF do r3/frr.conf
+Dopisano konfigurację OSPF do r4/frr.conf
+Dopisano konfigurację OSPF do r5/frr.conf
+Dopisano konfigurację OSPF do r6/frr.conf
+Spopulowano konfiguracje ruterow do mininet!
+['r1', 'r2', 'r3', 'r4', 'r5', 'r6']
+Ostrzeżenie: sieć 192.168.1.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r1', 'eth0', '192.168.1.1/24')]
+Ostrzeżenie: sieć 192.168.2.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r2', 'eth0', '192.168.2.1/24')]
+Ostrzeżenie: sieć 192.168.3.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r3', 'eth0', '192.168.3.1/24')]
+Ostrzeżenie: sieć 192.168.6.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r6', 'eth0', '192.168.6.1/24')]
+Ostrzeżenie: sieć 192.168.4.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r4', 'eth0', '192.168.4.1/24')]
+Ostrzeżenie: sieć 192.168.5.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r5', 'eth0', '192.168.5.1/24')]
+# Generated Mininet links:
+
+        self.addLink(r1,
+                     r2,
+                     intfName1='eth1',
+                     params1={'ip': '10.0.0.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.0.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r1', 'interface': 'eth1', 'ip': '10.0.0.1/24'}, 'device2': {'name': 'r2', 'interface': 'eth1', 'ip': '10.0.0.2/24'}}
+        self.addLink(r1,
+                     r5,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.1.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.1.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r1', 'interface': 'eth2', 'ip': '10.0.1.1/24'}, 'device2': {'name': 'r5', 'interface': 'eth1', 'ip': '10.0.1.2/24'}}
+        self.addLink(r1,
+                     r6,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.2.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.2.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r1', 'interface': 'eth3', 'ip': '10.0.2.1/24'}, 'device2': {'name': 'r6', 'interface': 'eth1', 'ip': '10.0.2.2/24'}}
+        self.addLink(r2,
+                     r3,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.3.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.3.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r2', 'interface': 'eth2', 'ip': '10.0.3.1/24'}, 'device2': {'name': 'r3', 'interface': 'eth1', 'ip': '10.0.3.2/24'}}
+        self.addLink(r2,
+                     r5,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.4.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.4.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r2', 'interface': 'eth3', 'ip': '10.0.4.1/24'}, 'device2': {'name': 'r5', 'interface': 'eth2', 'ip': '10.0.4.2/24'}}
+        self.addLink(r2,
+                     r6,
+                     intfName1='eth4',
+                     params1={'ip': '10.0.5.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.5.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r2', 'interface': 'eth4', 'ip': '10.0.5.1/24'}, 'device2': {'name': 'r6', 'interface': 'eth2', 'ip': '10.0.5.2/24'}}
+        self.addLink(r4,
+                     r5,
+                     intfName1='eth1',
+                     params1={'ip': '10.0.6.1/24'},
+                     intfName2='eth3',
+                     params2={'ip': '10.0.6.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r4', 'interface': 'eth1', 'ip': '10.0.6.1/24'}, 'device2': {'name': 'r5', 'interface': 'eth3', 'ip': '10.0.6.2/24'}}
+Czekam na zbieżność routingu...
+Liczba folderów: 63
+Startuje iperf na klientach!
+Host h1 sends with 91Mbps bandwidth to Host h2
+Host h1 sends with 98Mbps bandwidth to Host h4
+Host h1 sends with 54Mbps bandwidth to Host h5
+Host h2 sends with 86Mbps bandwidth to Host h1
+Host h2 sends with 68Mbps bandwidth to Host h3
+Host h2 sends with 76Mbps bandwidth to Host h4
+Host h2 sends with 76Mbps bandwidth to Host h5
+Host h3 sends with 78Mbps bandwidth to Host h1
+Host h3 sends with 79Mbps bandwidth to Host h2
+Host h3 sends with 53Mbps bandwidth to Host h4
+Host h3 sends with 82Mbps bandwidth to Host h5
+Host h4 sends with 67Mbps bandwidth to Host h2
+Host h4 sends with 55Mbps bandwidth to Host h3
+Host h4 sends with 90Mbps bandwidth to Host h5
+Host h4 sends with 80Mbps bandwidth to Host h6
+Host h5 sends with 96Mbps bandwidth to Host h1
+Host h5 sends with 60Mbps bandwidth to Host h2
+Host h5 sends with 86Mbps bandwidth to Host h3
+Host h5 sends with 74Mbps bandwidth to Host h4
+Host h5 sends with 51Mbps bandwidth to Host h6
+Host h6 sends with 74Mbps bandwidth to Host h1
+Host h6 sends with 69Mbps bandwidth to Host h3
+Host h6 sends with 84Mbps bandwidth to Host h4
+Host h6 sends with 64Mbps bandwidth to Host h5
+Rozpoczęto iperf na klientach!
+Oczekiwanie na wykonanie się iperfa
+Usuwam katalog: /home/ubuntu/Project/r1
+Usuwam katalog: /home/ubuntu/Project/r2
+Usuwam katalog: /home/ubuntu/Project/r3
+Usuwam katalog: /home/ubuntu/Project/r6
+Usuwam katalog: /home/ubuntu/Project/r4
+Usuwam katalog: /home/ubuntu/Project/r5

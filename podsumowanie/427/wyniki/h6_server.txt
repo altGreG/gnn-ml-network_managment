@@ -1,0 +1,31 @@
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 192.168.6.2 port 5001 connected with 192.168.1.2 port 48764
+[  2] local 192.168.6.2 port 5001 connected with 192.168.5.2 port 36424
+[ ID] Interval       Transfer     Bandwidth
+[  2] 0.0000-1.0000 sec  10.5 MBytes  87.9 Mbits/sec
+[  1] 0.0000-1.0000 sec   846 KBytes  6.93 Mbits/sec
+[  2] 1.0000-2.0000 sec  10.9 MBytes  91.5 Mbits/sec
+[  1] 1.0000-2.0000 sec   457 KBytes  3.74 Mbits/sec
+[  2] 2.0000-3.0000 sec  11.0 MBytes  92.6 Mbits/sec
+[  1] 2.0000-3.0000 sec   321 KBytes  2.63 Mbits/sec
+[  2] 3.0000-4.0000 sec  11.1 MBytes  92.9 Mbits/sec
+[  1] 3.0000-4.0000 sec   264 KBytes  2.17 Mbits/sec
+[  2] 4.0000-5.0000 sec  11.1 MBytes  93.1 Mbits/sec
+[  1] 4.0000-5.0000 sec   257 KBytes  2.11 Mbits/sec
+[  2] 5.0000-6.0000 sec  11.1 MBytes  93.3 Mbits/sec
+[  1] 5.0000-6.0000 sec   233 KBytes  1.91 Mbits/sec
+[  2] 6.0000-7.0000 sec  11.1 MBytes  92.9 Mbits/sec
+[  1] 6.0000-7.0000 sec   273 KBytes  2.24 Mbits/sec
+[  2] 7.0000-8.0000 sec  11.1 MBytes  93.0 Mbits/sec
+[  1] 7.0000-8.0000 sec   238 KBytes  1.95 Mbits/sec
+[  2] 8.0000-9.0000 sec  11.1 MBytes  93.0 Mbits/sec
+[  1] 8.0000-9.0000 sec   253 KBytes  2.07 Mbits/sec
+[  2] 9.0000-10.0000 sec  11.1 MBytes  93.3 Mbits/sec
+[  1] 9.0000-10.0000 sec   226 KBytes  1.85 Mbits/sec
+[  2] 10.0000-10.7935 sec  8.78 MBytes  92.9 Mbits/sec
+[  2] 0.0000-10.7935 sec   119 MBytes  92.4 Mbits/sec
+[  1] 10.0000-11.0000 sec   434 KBytes  3.56 Mbits/sec
+[  1] 0.0000-11.2453 sec  4.08 MBytes  3.04 Mbits/sec

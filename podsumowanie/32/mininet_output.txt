@@ -1,0 +1,212 @@
+Wylosowana liczba ruterow: 8
+Utworzono 8 katalogów z plikami konfiguracyjnymi.
+Podmieniono 4. linijkę w pliku 'config_frr.conf' na:
+for NODE in r1 r2 r3 r4 r5 r6 r7 r8
+Połączenia między ruterami:
+  r1 <--> r3
+  r1 <--> r5
+  r1 <--> r6
+  r2 <--> r3
+  r2 <--> r5
+  r2 <--> r8
+  r3 <--> r4
+  r3 <--> r6
+  r3 <--> r7
+  r4 <--> r5
+  r4 <--> r6
+  r4 <--> r7
+  r4 <--> r8
+
+Wylosowana macierz sąsiedztwa:
+[[0 0 1 0 1 1 0 0]
+ [0 0 1 0 1 0 0 1]
+ [1 1 0 1 0 1 1 0]
+ [0 0 1 0 1 1 1 1]
+ [1 1 0 1 0 0 0 0]
+ [1 0 1 1 0 0 0 0]
+ [0 0 1 1 0 0 0 0]
+ [0 1 0 1 0 0 0 0]]
+Dopisano konfigurację interfejsów do r1/frr.conf
+Dopisano konfigurację interfejsów do r2/frr.conf
+Dopisano konfigurację interfejsów do r3/frr.conf
+Dopisano konfigurację interfejsów do r4/frr.conf
+Dopisano konfigurację interfejsów do r5/frr.conf
+Dopisano konfigurację interfejsów do r6/frr.conf
+Dopisano konfigurację interfejsów do r7/frr.conf
+Dopisano konfigurację interfejsów do r8/frr.conf
+Dopisano konfigurację OSPF do r1/frr.conf
+Dopisano konfigurację OSPF do r2/frr.conf
+Dopisano konfigurację OSPF do r3/frr.conf
+Dopisano konfigurację OSPF do r4/frr.conf
+Dopisano konfigurację OSPF do r5/frr.conf
+Dopisano konfigurację OSPF do r6/frr.conf
+Dopisano konfigurację OSPF do r7/frr.conf
+Dopisano konfigurację OSPF do r8/frr.conf
+Spopulowano konfiguracje ruterow do mininet!
+['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8']
+Ostrzeżenie: sieć 192.168.1.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r1', 'eth0', '192.168.1.1/24')]
+Ostrzeżenie: sieć 192.168.7.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r7', 'eth0', '192.168.7.1/24')]
+Ostrzeżenie: sieć 192.168.2.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r2', 'eth0', '192.168.2.1/24')]
+Ostrzeżenie: sieć 192.168.3.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r3', 'eth0', '192.168.3.1/24')]
+Ostrzeżenie: sieć 192.168.6.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r6', 'eth0', '192.168.6.1/24')]
+Ostrzeżenie: sieć 192.168.8.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r8', 'eth0', '192.168.8.1/24')]
+Ostrzeżenie: sieć 192.168.4.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r4', 'eth0', '192.168.4.1/24')]
+Ostrzeżenie: sieć 192.168.5.0/24 zawiera 1 interfejsów (pomijana lub wymaga dodatkowej obsługi): [('r5', 'eth0', '192.168.5.1/24')]
+# Generated Mininet links:
+
+        self.addLink(r1,
+                     r3,
+                     intfName1='eth1',
+                     params1={'ip': '10.0.0.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.0.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r1', 'interface': 'eth1', 'ip': '10.0.0.1/24'}, 'device2': {'name': 'r3', 'interface': 'eth1', 'ip': '10.0.0.2/24'}}
+        self.addLink(r1,
+                     r5,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.1.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.1.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r1', 'interface': 'eth2', 'ip': '10.0.1.1/24'}, 'device2': {'name': 'r5', 'interface': 'eth1', 'ip': '10.0.1.2/24'}}
+        self.addLink(r1,
+                     r6,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.2.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.2.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r1', 'interface': 'eth3', 'ip': '10.0.2.1/24'}, 'device2': {'name': 'r6', 'interface': 'eth1', 'ip': '10.0.2.2/24'}}
+        self.addLink(r7,
+                     r3,
+                     intfName1='eth1',
+                     params1={'ip': '10.0.8.2/24'},
+                     intfName2='eth5',
+                     params2={'ip': '10.0.8.1/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r7', 'interface': 'eth1', 'ip': '10.0.8.2/24'}, 'device2': {'name': 'r3', 'interface': 'eth5', 'ip': '10.0.8.1/24'}}
+        self.addLink(r7,
+                     r4,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.11.2/24'},
+                     intfName2='eth4',
+                     params2={'ip': '10.0.11.1/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r7', 'interface': 'eth2', 'ip': '10.0.11.2/24'}, 'device2': {'name': 'r4', 'interface': 'eth4', 'ip': '10.0.11.1/24'}}
+        self.addLink(r2,
+                     r3,
+                     intfName1='eth1',
+                     params1={'ip': '10.0.3.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.3.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r2', 'interface': 'eth1', 'ip': '10.0.3.1/24'}, 'device2': {'name': 'r3', 'interface': 'eth2', 'ip': '10.0.3.2/24'}}
+        self.addLink(r2,
+                     r5,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.4.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.4.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r2', 'interface': 'eth2', 'ip': '10.0.4.1/24'}, 'device2': {'name': 'r5', 'interface': 'eth2', 'ip': '10.0.4.2/24'}}
+        self.addLink(r2,
+                     r8,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.5.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.5.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r2', 'interface': 'eth3', 'ip': '10.0.5.1/24'}, 'device2': {'name': 'r8', 'interface': 'eth1', 'ip': '10.0.5.2/24'}}
+        self.addLink(r3,
+                     r4,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.6.1/24'},
+                     intfName2='eth1',
+                     params2={'ip': '10.0.6.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r3', 'interface': 'eth3', 'ip': '10.0.6.1/24'}, 'device2': {'name': 'r4', 'interface': 'eth1', 'ip': '10.0.6.2/24'}}
+        self.addLink(r3,
+                     r6,
+                     intfName1='eth4',
+                     params1={'ip': '10.0.7.1/24'},
+                     intfName2='eth2',
+                     params2={'ip': '10.0.7.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r3', 'interface': 'eth4', 'ip': '10.0.7.1/24'}, 'device2': {'name': 'r6', 'interface': 'eth2', 'ip': '10.0.7.2/24'}}
+        self.addLink(r6,
+                     r4,
+                     intfName1='eth3',
+                     params1={'ip': '10.0.10.2/24'},
+                     intfName2='eth3',
+                     params2={'ip': '10.0.10.1/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r6', 'interface': 'eth3', 'ip': '10.0.10.2/24'}, 'device2': {'name': 'r4', 'interface': 'eth3', 'ip': '10.0.10.1/24'}}
+        self.addLink(r8,
+                     r4,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.12.2/24'},
+                     intfName2='eth5',
+                     params2={'ip': '10.0.12.1/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r8', 'interface': 'eth2', 'ip': '10.0.12.2/24'}, 'device2': {'name': 'r4', 'interface': 'eth5', 'ip': '10.0.12.1/24'}}
+        self.addLink(r4,
+                     r5,
+                     intfName1='eth2',
+                     params1={'ip': '10.0.9.1/24'},
+                     intfName2='eth3',
+                     params2={'ip': '10.0.9.2/24'})
+
+XXX INFO XXX
+ {'device1': {'name': 'r4', 'interface': 'eth2', 'ip': '10.0.9.1/24'}, 'device2': {'name': 'r5', 'interface': 'eth3', 'ip': '10.0.9.2/24'}}
+Czekam na zbieżność routingu...
+Liczba folderów: 33
+Startuje iperf na klientach!
+Host h1 sends with 66Mbps bandwidth to Host h3
+Host h1 sends with 74Mbps bandwidth to Host h6
+Host h1 sends with 96Mbps bandwidth to Host h7
+Host h2 sends with 64Mbps bandwidth to Host h1
+Host h2 sends with 65Mbps bandwidth to Host h3
+Host h2 sends with 77Mbps bandwidth to Host h7
+Host h2 sends with 85Mbps bandwidth to Host h8
+Host h3 sends with 97Mbps bandwidth to Host h4
+Host h3 sends with 97Mbps bandwidth to Host h6
+Host h3 sends with 64Mbps bandwidth to Host h7
+Host h3 sends with 81Mbps bandwidth to Host h8
+Host h4 sends with 53Mbps bandwidth to Host h1
+Host h4 sends with 87Mbps bandwidth to Host h2
+Host h4 sends with 60Mbps bandwidth to Host h7
+Host h4 sends with 73Mbps bandwidth to Host h8
+Host h5 sends with 87Mbps bandwidth to Host h1
+Host h5 sends with 88Mbps bandwidth to Host h4
+Host h6 sends with 68Mbps bandwidth to Host h1
+Host h6 sends with 96Mbps bandwidth to Host h3
+Host h6 sends with 89Mbps bandwidth to Host h4
+Host h6 sends with 62Mbps bandwidth to Host h8
+Host h7 sends with 97Mbps bandwidth to Host h4
+Host h7 sends with 57Mbps bandwidth to Host h6
+Host h8 sends with 84Mbps bandwidth to Host h1
+Host h8 sends with 89Mbps bandwidth to Host h3
+Host h8 sends with 100Mbps bandwidth to Host h5
+Rozpoczęto iperf na klientach!
+Oczekiwanie na wykonanie się iperfa
+Usuwam katalog: /home/ubuntu/Project/r1
+Usuwam katalog: /home/ubuntu/Project/r7
+Usuwam katalog: /home/ubuntu/Project/r2
+Usuwam katalog: /home/ubuntu/Project/r3
+Usuwam katalog: /home/ubuntu/Project/r6
+Usuwam katalog: /home/ubuntu/Project/r8
+Usuwam katalog: /home/ubuntu/Project/r4
+Usuwam katalog: /home/ubuntu/Project/r5
